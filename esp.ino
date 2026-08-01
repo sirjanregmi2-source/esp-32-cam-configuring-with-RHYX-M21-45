@@ -4,8 +4,8 @@
 #define CAMERA_MODEL_RHYX_M21
 #include "camera_pins.h"
 
- const char *ssid = "dipu_DHFiberNet";
-const char *password = "DHFibernet@0327884";
+ const char *ssid = "......";
+const char *password = "......";
 
 void startCameraServer();
 
@@ -34,10 +34,10 @@ void setup() {
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
 
-  // Frekansı düşürüp donmayı engelleyen kısım — DEĞİŞTİRME
+  / 
   config.xclk_freq_hz = 10000000;
-  config.pixel_format = PIXFORMAT_RGB565;  // sensör JPEG desteklemiyor, web server kendi çeviriyor
-  config.frame_size = FRAMESIZE_QVGA;      // QQVGA'dan değişti — 320x240, tespit için yeterli
+  config.pixel_format = PIXFORMAT_RGB565;  
+  config.frame_size = FRAMESIZE_QVGA;      
   config.jpeg_quality = 10;
   config.fb_count = 2;
   config.grab_mode = CAMERA_GRAB_LATEST;
@@ -59,7 +59,7 @@ void setup() {
 
   startCameraServer();
 
-  Serial.print("Camera Ready! machikne bano: http://");
+  Serial.print("Camera Ready! wow sccessful: http://");
   Serial.println(WiFi.localIP());
 }
 
